@@ -28,7 +28,8 @@ This skill merges three layers:
 4. Rewrite the title and first two paragraphs early.
 5. Rebuild the middle in numbered blocks with evidence, details, and takeaways.
 6. Add only a few strong insight sentences; do not inflate with empty language.
-7. Close with a reusable lesson and a clear next action for the reader.
+7. Save the rewrite as a new Markdown file instead of overwriting the source, unless the user explicitly asks for in-place editing.
+8. Close with a reusable lesson and a clear next action for the reader.
 
 Read [references/ultimate-template.md](references/ultimate-template.md) when you need the full fill-in template, title formulas, opening options, paragraph rules, and closing checklist.
 
@@ -44,8 +45,16 @@ When working from an existing Markdown draft:
 - delete repetition, weak throat-clearing, and vague claims
 - convert loose narration into: result, context, action, evidence, lesson
 - keep the final output in Markdown
+- preserve the source draft as-is by default
 
-If the user gives a file path, prefer editing that Markdown file in place unless they ask for a separate rewritten version.
+If the user gives a file path, default to writing a sibling file with the suffix `.shengcai.md`.
+
+Examples:
+
+- `draft.md` -> `draft.shengcai.md`
+- `notes/opc.md` -> `notes/opc.shengcai.md`
+
+Only overwrite the original Markdown file if the user explicitly asks for in-place editing.
 
 ## Article Type Decision
 
@@ -86,6 +95,7 @@ If these answers are thin, do not beautify. Keep the rewrite conservative and as
 - Avoid empty claims like “很重要”“很有帮助” unless followed by proof.
 - When rewriting an existing draft, salvage the strongest lines and strongest evidence first.
 - If a section has no proof, either trim it or rewrite it as a clearly marked judgment, not a fake certainty.
+- If saving to a new file, keep links and relative asset paths compatible with the original file layout.
 
 ## Review Mode
 
@@ -97,4 +107,4 @@ When reviewing a draft, check these first:
 4. Are there enough details to make the post believable?
 5. Does the ending convert the story into reusable guidance?
 
-If the user asks for a full article from an existing Markdown file, restructure first and only then rewrite sentence-level wording.
+If the user asks for a full article from an existing Markdown file, restructure first and only then rewrite sentence-level wording. Save to a new `.shengcai.md` file by default.

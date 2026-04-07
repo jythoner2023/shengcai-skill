@@ -36,7 +36,8 @@ Use this rewrite sequence:
    - stronger opening
    - tighter numbered middle
    - clearer closing
-6. Keep the output in Markdown.
+6. Save as a new Markdown file by default.
+7. Keep the output in Markdown.
 
 Hard constraints:
 
@@ -45,6 +46,8 @@ Hard constraints:
 - If a claim has no support, weaken it or remove it.
 - Prefer shortening and reorganizing before expanding.
 - If the original has a good line, keep it and improve its placement.
+- Preserve the original draft unless the user explicitly asks to overwrite it.
+- Default output name: `<original-stem>.shengcai.md`.
 
 Quick rewrite checklist:
 
@@ -52,6 +55,7 @@ Quick rewrite checklist:
 - Does the middle move from problem to action to evidence to lesson?
 - Is every big claim backed by something observable?
 - Does the ending tell the reader what to do with the story?
+- Are relative image paths and links still valid in the new sibling file?
 
 ## 1. 选题
 
