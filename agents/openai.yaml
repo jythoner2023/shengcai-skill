@@ -1,0 +1,4 @@
+interface:
+  display_name: "生财精华帖终极写作"
+  short_description: "把经验、结果和方法写成生财有术风格精华帖的完整模板"
+  default_prompt: "Use $shengcai to rewrite my Markdown draft into a Shengcai-style essence post."
